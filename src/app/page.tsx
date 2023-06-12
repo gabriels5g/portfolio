@@ -1,17 +1,18 @@
 'use client'
-import { Header } from '@/components/Header'
+
 import rectangle from '../assets/Rectangle.png'
 import bgLanguages from '../assets/bg-languages.svg'
 import Image from 'next/image'
-import { EnvelopeSimple } from '@phosphor-icons/react'
 import { Project } from '@/components/Project'
+import { Header } from '@/components/Header'
+import { Widget } from '@/components/Widget'
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className="relative flex flex-col items-center">
-        <div className="mt-20 flex justify-around px-8">
+        <div className="mt-48 flex justify-around px-8 md:mt-60">
           <div className="mr-20 flex flex-col">
             <h1 className="whitespace-nowrap text-4xl font-bold text-gray-50 lg:text-[4rem]">
               Gabriel da Silva
@@ -32,12 +33,7 @@ export default function Home() {
             className="hidden w-[50%] max-w-[480px] sm:flex"
           />
         </div>
-        <div className=" fixed bottom-[10%] left-[5%] flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gray-500">
-          <EnvelopeSimple
-            color="#A8A8B3"
-            className="transition-colors hover:fill-white"
-          />
-        </div>
+        <Widget />
         <div className="-z-10 mt-20 flex w-full justify-center overflow-hidden border-t border-gray-700">
           <Image src={bgLanguages} width={1280} height={200} alt="" />
         </div>
